@@ -1,0 +1,125 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fef9f6;
+  padding: 20px;
+  color: #2b2b2b;
+}
+
+.awards-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.section-title {
+  font-size: 25px;
+  color: #5e4d47;
+  margin-bottom: 10px;
+}
+
+.arrow{
+    width: 25px;
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2b2b2b;
+}
+
+.section-heading span {
+  color: #7c6663;
+}
+
+.awards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.award {
+  display: flex; 
+  align-items: flex-start; 
+  gap: 80px;
+  width: 150%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.badge {
+  position: relative;
+  width: 120px;
+  height: 100px;
+  flex-shrink: 0;
+  top: -20px;
+}
+
+.laurel {
+  width: 150%;
+  height: auto;
+  display: block;
+}
+
+.stars {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 65px;
+}
+
+.star {
+  position: absolute;
+  width: 24px;
+  height: auto;
+}
+
+.star.left {
+  top: 12px;
+  left: -28px;
+}
+
+.star.middle {
+  top: 4px;
+  left: 9%;
+  transform: translateX(-50%) rotate(0deg);
+
+}
+
+.star.right {
+  top: 12px;
+  right: 30px;
+}
+
+.award-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  text-align: left;
+  padding-left: 2px;
+  padding-right: 40px;
+}
+
+.award-info h2 {
+  font-size: 28px;
+  margin: 0;
+  font-weight: 600;
+}
+
+.award-info h3 {
+  font-size: 28px;
+  margin: 3px 0;
+  font-weight: 700;
+}
+
+.award-info p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.4;
+  margin-top: 15px;
+}
