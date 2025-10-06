@@ -1,47 +1,80 @@
-body, html, #root {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #0a1f44; 
-  color: white;
-  scroll-behavior: smooth;
-}
 
-.app {
+.App {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px;
+  background-color: #f5f0eb;
+  min-height: 100vh;
+  padding: 50px 20px;
+  font-family: "Arial", sans-serif;
+  overflow: hidden; 
 }
 
-h1 {
-  margin-bottom: 40px;
-  text-align: center;
-  font-size: 2.5rem;
-  color: #ffffff;
+.skills-heading {
+  position: fixed;
+  top: 20px;
+  font-size: 3rem;
+  color: #5c4033; 
+  z-index: 10;
 }
 
-.skills-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px; 
+.scroll-container {
   width: 100%;
+  overflow: hidden;
+  margin-top: 120px; 
 }
 
-.skill-card {
-  background: #1e3a8a;
-  padding: 25px 40px;
-  border-radius: 12px;
-  text-align: center;
-  font-size: 1.3rem;
-  min-width: 300px;
-  max-width: 500px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: transform 0.2s;
+.scroll-track {
+  display: flex;
+  gap: 50px;
+  animation: scroll 20s linear infinite;
 }
 
-.skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+}
+
+.skill-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: transform 0.3s;
+}
+
+.skill-item p {
+  margin: 0;
+  font-weight: bold;
+  color: #5c4033;
+}
+
+.skill-item:hover img {
+  transform: scale(1.2);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-heading {
+    font-size: 2rem;
+  }
+
+  .skill-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .scroll-track {
+    gap: 30px;
+  }
 }
